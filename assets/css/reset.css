@@ -582,6 +582,6 @@ a.disabled {
   display: block;
   margin: 0 auto;
 }
-.post ul {
+.post ul, .post ol {
   margin-left: 40px;
 }
