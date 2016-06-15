@@ -222,7 +222,6 @@ hr {
 
 pre {
   overflow: auto;
-  margin: 20px;
 }
 
 /**
@@ -572,11 +571,17 @@ table {
 }
 
 /* Custom styles */
+a {
+  word-wrap: break-word;
+}
 a.disabled {
   pointer-events: none;
   color: #eee;
 }
-p img {
+.post p img {
   display: block;
   margin: 0 auto;
+}
+.post ul {
+  margin-left: 40px;
 }
