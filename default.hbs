@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{!-- Styles'n'Scripts --}}
+    <link rel="stylesheet" href="https://npmcdn.com/tachyons@4.0.0-beta.31/css/tachyons.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/reset.css"}}" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700,700italic,300italic" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/grayscale.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} relative pb6 mt5" style="min-height:100vh;">
+
+    {{!-- The blog navigation links --}}
+    {{!-- navigation --}}
+
+    <div class="w-60-ns w-90 ph3 ph0-ns center">
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+    </div>
+    {{!-- The tiny footer at the very bottom --}}
+    <footer class="absolute w-100 left-0 bottom-0">
+        <section class="f6 tc pa3 ttu">Published with <a class="link dim" href="https://ghost.org">Ghost</a> using <a class="link dim" href="https://github.com/velveteer/inextinguishable">Inextinguishable</a></section>
+    </footer>
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/scripts.js"}}"></script>
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>

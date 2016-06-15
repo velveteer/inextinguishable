@@ -1,0 +1,12 @@
+{{!-- This is the post loop - each post will be output using this markup --}}
+{{#foreach posts}}
+<article class="pt5 lh-copy mw7 center tc {{post_class}}">
+    <header class="mb3">
+        <h2 class="ttu fw7 f3 lh-title tracked link dim pv1 mv1 mb0 bb b--light-gray"><a class="no-underline" href="{{url}}">{{title}}</a></h2>
+        <time class="f6 i ttu tracked gray" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+    </header>
+</article>
+{{/foreach}}
+
+{{!-- Previous/next page links - displayed on every page --}}
+{{pagination}}

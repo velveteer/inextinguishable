@@ -1,0 +1,52 @@
+{{!< default}}
+
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<header>
+    <nav class="mb3 tc">
+        {{#if @blog.navigation}}
+            <a class="ttu no-underline link dim ba br2 ph3 pv1" href="{{@blog.url}}">Home</a>
+        {{/if}}
+    </nav>
+</header>
+
+<main class="" role="main">
+    <article class="{{post_class}}">
+
+        <header class="pb5">
+            <h1 class="f-subheadline-ns f1 fw3 tc ttu tracked mb0-ns">{{title}}</h1>
+            <section class="tc">
+                <time class="i ttu dark-gray" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+            </section>
+        </header>
+
+        <section class="lh-copy indent center mw8 pb4">
+            {{content}}
+        </section>
+
+        {{!-- Links to Previous/Next posts --}}
+        <aside class="pb5">
+            {{#next_post}}
+                <a class="fr ph3 pv1 no-underline dim link ba br2 ttu f6" href="{{url}}">Future</a>
+            {{else}}
+                <a class="fr ph3 pv1 no-underline dim link ba br2 ttu f6 disabled" href="{{url}}">Future</a>
+            {{/next_post}}
+            {{#prev_post}}
+                <a class="fl ph3 pv1 no-underline dim link ba br2 ttu f6" href="{{url}}">Past</a>
+            {{else}}
+                <a class="fl ph3 pv1 no-underline dim link ba br2 ttu f6 disabled" href="{{url}}">Past</a>
+            {{/prev_post}}
+        </aside>
+
+        <aside class="post-comments">
+            <div id="disqus_thread"></div>
+        </aside>
+
+    </article>
+</main>
+
+{{/post}}
