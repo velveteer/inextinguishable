@@ -585,3 +585,8 @@ a.disabled {
 .post ul, .post ol {
   margin-left: 40px;
 }
+.post blockquote {
+  background: rgba(0,0,0,0.02);
+  font-style: italic;
+  padding: 20px;
+}
