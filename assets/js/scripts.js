@@ -9,7 +9,6 @@
   var $document = $(document);
 
   $document.ready(function () {
-  console.log('here');
 
     /* ==========================================================================
        Initialize and load Disqus
@@ -17,13 +16,11 @@
 
     function comments() {
       if (typeof disqus === 'undefined' || !document.getElementById('disqus_thread')) {
-        console.log('here');
         $('.post-comments').css({
           'display' : 'none'
         });
       } else {
         if (window.DISQUS) {
-          console.log('here');
           return DISQUS.reset({
             reload: true,
             config: function () {
@@ -45,5 +42,3 @@
   });
 
 })(jQuery);
-
-console.log("FUCK");
