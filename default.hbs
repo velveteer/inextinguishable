@@ -17,8 +17,8 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" href="https://npmcdn.com/tachyons@4.0.0-beta.31/css/tachyons.min.css">
-    <link rel="stylesheet" type="text/css" href="{{asset "css/reset.css"}}" />
+    <link rel="stylesheet" href="https://npmcdn.com/tachyons@4.1.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/app.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,700,700italic,300italic" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/grayscale.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
@@ -27,7 +27,7 @@
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{body_class}} relative pb6 mt5" style="min-height:100vh;">
+<body class="relative pb6 mt5">
 
     {{!-- The blog navigation links --}}
     {{!-- navigation --}}
@@ -39,7 +39,7 @@
 
     </div>
     {{!-- The tiny footer at the very bottom --}}
-    <footer class="absolute w-100 left-0 bottom-0">
+    <footer class="absolute w-100 left-0 bottom-0 right-0">
         <section class="f6 tc pa3 ttu">Published with <a class="link dim" href="https://ghost.org">Ghost</a> using <a class="link dim" href="https://github.com/velveteer/inextinguishable">Inextinguishable</a></section>
     </footer>
 

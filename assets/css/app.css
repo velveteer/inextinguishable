@@ -1,0 +1,40 @@
+/* Typography */
+html {
+  height: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, Lato, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.5;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+}
+a {
+  word-wrap: break-word;
+  background-color: transparent;
+  color: #378a9b;
+  transition: opacity .2s;
+}
+a:hover {
+  opacity: 0.5;
+}
+a.disabled {
+  pointer-events: none;
+  color: #eee;
+}
+
+/* Posts */
+.post p img {
+  display: block;
+  margin: 0 auto;
+}
+.post ul, .post ol {
+  margin-left: 40px;
+}
+.post blockquote {
+  background: rgba(0,0,0,0.02);
+  font-style: italic;
+  padding: 20px;
+}
