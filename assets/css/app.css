@@ -38,3 +38,6 @@ a.disabled {
   font-style: italic;
   padding: 20px;
 }
+.post img {
+  max-width: 100%;
+}
